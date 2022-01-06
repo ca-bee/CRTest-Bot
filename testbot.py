@@ -10,16 +10,16 @@ client = discord.Client()
 responses = [
     "NO",
     "YES",
-    "meh maybe",
+    "maybe",
     "why",
     "It is extremely likely",
-    "Probable chance of not"
+    "Probably not"
 
 ]
 
 greetingMessage = [
-    "Don't straggle too long~",
-    "Have a cup of joe"
+    "Stay as long as you want",
+    "Nice to meet you"
 ]
 
 
@@ -30,7 +30,7 @@ async def on_message(message):
 
     if message.content.startswith("Hello") or message.content.startswith("Hi"):
         await message.channel.send("Welcome to the server! \n")
-        # await message.channel.send(random.choice(responses))
+        await message.channel.send(random.choice(greetingMessage))
 
     if message.content.startswith(".say"):
         mes = message.content.split()
